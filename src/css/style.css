@@ -1,0 +1,139 @@
+/* ==============================
+   Tema claro/oscuro (blanco roto + tinta)
+   + Fondo con foto del bar
+   + Cards semitransparentes para ver fondo
+   ============================== */
+
+:root{
+  --sf-bg: #f6f3ee;          /* blanco roto */
+  --sf-ink: #111827;         /* tinta oscura */
+  --sf-muted: #4b5563;
+
+  /* cards */
+  --sf-card: rgba(255,255,255,.52);
+  --sf-row: rgba(255,255,255,.58);
+  --sf-border: rgba(17,24,39,.18);
+  --sf-shadow: 0 10px 26px rgba(17,24,39,.10);
+
+  /* overlay para que se lea encima del fondo */
+  --sf-overlay: rgba(246,243,238,.18);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* Fondo del bar (desde src/css -> ../../img/) */
+  background: url("../../img/fondo-bar.jpg") center/cover fixed no-repeat;
+  background-color: var(--sf-bg);
+  color: var(--sf-ink);
+  position: relative;
+}
+
+/* Capa suave para mejorar legibilidad pero dejando ver la foto */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--sf-overlay);
+}
+#menuGrid{
+  gap: 20px; /* antes era 16px */
+}
+
+/* Título serif como en carta */
+.sf-h1{
+  font-family: "Playfair Display", serif;
+  letter-spacing: .2px;
+}
+
+/* Search */
+.sf-search{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.55rem .85rem;
+  border-radius:999px;
+  border:1px solid var(--sf-border);
+  background: rgba(255,255,255,.70);
+  box-shadow: 0 6px 14px rgba(17,24,39,.08);
+  width: 100%;
+}
+@media (min-width: 640px){
+  .sf-search{ width: auto; }
+}
+
+/* Cards planas */
+.sf-card{
+  background: var(--sf-card);
+  border: 1px solid var(--sf-border);
+  border-radius: 16px;
+  box-shadow: var(--sf-shadow);
+  overflow: hidden;
+  /* para que el blur/overlay no “tape” */
+  position: relative;
+}
+
+/* Imagen de cabecera por sección */
+.sf-card__img{
+  height: 110px;
+  width: 100%;
+  display:block;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+@media (max-width: 420px){
+  .sf-card__img{ height: 96px; }
+}
+
+.sf-card__head{
+  padding: 6px 8px 5px;
+  border-bottom: 2px dotted rgba(17,24,39,.20); /* similar al folio */
+  background: rgba(255,255,255,.15);
+}
+
+.sf-card__title{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+  font-size: 20px;
+}
+
+.sf-card__note{
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--sf-muted);
+}
+
+.sf-list{
+  padding: 6px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sf-row{
+  border: 1px solid rgba(17,24,39,.10);
+  background: var(--sf-row);
+  border-radius: 14px;
+  padding: 6px 8px;
+}
+
+/* Puntos entre nombre y precio (“leader dots”) */
+.sf-leader{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  gap:.65rem;
+  align-items: baseline;
+}
+.sf-leader__name{ font-weight: 600; }
+.sf-leader__dots{
+  border-bottom: 1px dotted rgba(17,24,39,.38);
+  transform: translateY(-2px);
+}
+.sf-leader__price{
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}

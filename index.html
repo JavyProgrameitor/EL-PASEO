@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café-Bar El paseo — Carta</title>
+
+  <!-- Tailwind CDN (sin build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuentes (serif para títulos + sans para texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+
+<body>
+  <main class="mx-auto max-w-5xl px-4 py-6">
+
+    <!-- Barra simple (sin desplegables) -->
+<section class="mb-4 flex items-center justify-evenly">
+  <img
+    src="./img/logo.jpg"
+    alt="Café-Bar El Paseo"
+    class="h-10 w-auto rounded-full"
+    loading="eager"
+  />
+
+  <h1 class="text-5xl leading-tight sf-h1 text-white">
+    Café-Bar El paseo
+  </h1>
+</section>
+
+    <!-- Cards “planas” (siempre visibles) -->
+    <section id="menuGrid" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    </section>
+
+    <div class="text-center mt-6 text-xs text-gray-200">
+      © <span id="year"></span> Café-Bar El paseo
+    </div>
+  </main>
+
+  <script src="./src/js/bar.js"></script>
+</body>
+</html>

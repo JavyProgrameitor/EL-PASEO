@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "name": "Café-Bar El paseo",
+    "subtitle": "Carta digital",
+    "address": "Avd/ Paseo Virgen de Gracia",
+    "phone": "651 832 344",
+    "extra_note": "Cada ingrediente extra se cobrará un suplemento de 0,50€."
+  },
+  "sections": [
+    {
+      "id": "carne",
+      "title": "Carne",
+      "items": [
+        {
+          "name": "Pluma Ibérica",
+          "price": 18.0
+        },
+        {
+          "name": "Lagarto Ibérico",
+          "price": 18.0
+        },
+        {
+          "name": "Surtido de croquetas",
+          "price": 10.0
+        },
+        {
+         "name": "Solomillo",
+         "price": 13.0,
+         "desc": "Solomillo con: Ajo tostado · Torta · Salsa verde · Rulo · Cebolla caramelizada"
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "title": "Ensaladas",
+      "items": [
+        {
+          "name": "Mixta",
+          "price": 9.0
+        },
+        {
+          "name": "César",
+          "price": 11.0
+        },
+        {
+          "name": "Rulo, nueces, arándanos y cebolla caramelizada",
+          "price": 11.0
+        }
+      ]
+    },
+    {
+      "id": "hamburguesas",
+      "title": "Hamburguesas",
+      "items": [
+        {
+          "name": "Normal",
+          "price": 5.0
+        },
+        {
+          "name": "Completa",
+          "price": 6.5
+        },
+        {
+          "name": "Buey",
+          "price": 7.5
+        },
+        {
+          "name": "Buey Completa",
+          "price": 9.0
+        },
+        {
+          "name": "Crispy",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "pescado",
+      "title": "Pescado",
+      "items": [
+        {
+          "name": "Bacalao dorado / nata",
+          "price": 12.0
+        },
+        {
+          "name": "Fritura de pescado",
+          "price": 17.0
+        },
+        {
+          "name": "Gambón",
+          "price": 17.0
+        },
+        {
+          "name": "Almejas a la marinera",
+          "price": 15.0
+        },
+        {
+          "name": "Rejos",
+          "price": 14.0
+        },
+        {
+          "name": "Calamares",
+          "price": 12.0
+        },
+        {
+          "name": "Sepia",
+          "price": 16.0
+        }
+      ]
+    },
+    {
+      "id": "bocadillos",
+      "title": "Bocadillos",
+      "items": [
+        {
+          "name": "Pollo/Lomo rulo y cebolla caramelizada",
+          "price": 5.0
+        },
+        {
+          "name": "Calamares",
+          "price": 5.0
+        },
+        {
+          "name": "Pollo, bacon y queso",
+          "price": 5.0
+        },
+        {
+          "name": "Serranito Pollo/Lomo",
+          "price": 5.0
+        },
+        {
+          "name": "Jamón",
+          "price": 6.0
+        },
+        {
+          "name": "Patatas Cheddar Bacon",
+          "price": 6.0
+        },
+        {
+          "name": "Patatas Fritas",
+          "price": 4.0
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Para niños",
+      "items": [
+        {
+          "name": "Pollo/Lomo con patatas",
+          "price": 6.5
+        },
+        {
+          "name": "Nugget de pollo con patatas",
+          "price": 6.5
+        }
+      ]
+    }
+  ]
+}
