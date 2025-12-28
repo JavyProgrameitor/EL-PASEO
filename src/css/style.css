@@ -16,7 +16,7 @@
   --sf-shadow: 0 10px 26px rgba(17,24,39,.10);
 
   /* overlay para que se lea encima del fondo */
-  --sf-overlay: rgba(246,243,238,.18);
+  --sf-overlay: rgba(246,243,238,.28);
 }
 
 *{ box-sizing: border-box; }
