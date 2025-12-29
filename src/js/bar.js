@@ -3,17 +3,6 @@
 const gridEl = document.getElementById("menuGrid");
 const searchEl = document.getElementById("search");
 
-// Mapa: id de sección (price.json) -> imagen en /img
-// Ajustado a tus nombres actuales de archivos
-const IMG_MAP = {
-  carne: "./img/carne.jpg",
-  ensaladas: "./img/ensalada.jpg",
-  hamburguesas: "./img/hamburgesa.jpg",
-  pescado: "./img/pescado.jpg",
-  bocadillos: "./img/bocadillo.jpg",
-  ninos: "./img/ninos.jpg",
-};
-
 function normalize(str){
   return (str || "")
     .toLowerCase()
@@ -30,17 +19,6 @@ function formatEuro(value){
 function card(section, items){
   const el = document.createElement("article");
   el.className = "sf-card";
-
-  // Imagen de sección (si existe)
-  const imgSrc = IMG_MAP[section.id];
-  if(imgSrc){
-    const img = document.createElement("img");
-    img.className = "sf-card__img";
-    img.src = imgSrc;
-    img.alt = section.title;
-    img.loading = "lazy";
-    el.appendChild(img);
-  }
 
   const head = document.createElement("div");
   head.className = "sf-card__head";
