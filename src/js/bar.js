@@ -1,7 +1,5 @@
-// Carta “plana” desde data/price.json (sin desplegables) + imágenes por sección
 
 const gridEl = document.getElementById("menuGrid");
-const searchEl = document.getElementById("search");
 
 function normalize(str){
   return (str || "")
@@ -121,7 +119,7 @@ async function main(){
 
   render(data, "");
 
-  searchEl?.addEventListener("input", (e) => render(data, e.target.value));
+  
 }
 
 main().catch((err) => {
